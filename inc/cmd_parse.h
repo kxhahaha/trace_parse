@@ -1,6 +1,6 @@
 #include<iostream.h>
 
-namespace
+namespace trace
 {
 	using namespace std;
 	
