@@ -12,8 +12,10 @@ namespace trace
     class log_base
     {
         private:
+            uint8_t plevel; //record level
         public:
-            log_base(string info, ...);
+            log_base();
+            void record(string str, ...);
     };
 
     class log : log_base
@@ -21,12 +23,12 @@ namespace trace
         private:
             s_uint_t log_cunt;
         public:
-            log(string info, ...):log_base(info, ...);
-            void e(); //error
-            void d(); //debug
-            void i(); //info
-            void w(); //warning
-            void s(); //serious
+            log();
+            void e(string str, ...); //error
+            void d(string str, ...); //debug
+            void i(string str, ...); //info
+            void w(string str, ...); //warning
+            void s(string str, ...); //serious
         
     };
 };
